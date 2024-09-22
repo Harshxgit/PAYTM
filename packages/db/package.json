@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "exporst": {
-    "./client": "./index.ts"
+    "./client": "./src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.19.1"
