@@ -23,7 +23,7 @@ export async function p2pTransfer(to:string,amount:number) {
         }
     }
     await prisma.$transaction(async(tx)=>{
-        await tx.$queryRaw`Select * From "Balace" WHERE "userid = ${Number(from)} FOR UPDATE`
+        await tx.$queryRaw`Select * From "Balance" WHERE "userid = ${Number(from)} FOR UPDATE`
         const fromBalance = await tx.balance.findUnique({
             where:{
                 userid : Number(from)
